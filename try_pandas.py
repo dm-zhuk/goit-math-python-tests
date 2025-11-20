@@ -28,4 +28,14 @@ contacts = pd.DataFrame(
     index=[1, 2, 3, 4, 5],
 )
 
-print(contacts)
+
+contacts.to_excel("./excel/contacts.xlsx", sheet_name="Contacts")
+# Примітка: для запису даних на кілька листів, необхідно створити об'єкт pd.ExcelWriter та викликати метод to_excel для кожного об'єкта.
+
+# contacts.to_csv("./excel/users.csv", index=False)
+
+# print(contacts)
+# print(contacts["name"])
+# print(contacts.loc[3])
+# print(contacts[contacts["favorite"]])
+# print(contacts.iloc[0:3])
